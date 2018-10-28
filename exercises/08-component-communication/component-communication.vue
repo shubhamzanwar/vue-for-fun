@@ -1,14 +1,18 @@
 <script>
 export default {
-  props: {}
-}
+  props: {
+    title: {
+      type: String
+    }
+  }
+};
 </script>
 
 <template>
   <div class="component-communication">
-    <h1></h1>
+    <h1>{{title}}</h1>
 
-    <button>Done</button>
+    <button @click="() => $emit('done')">Done</button>
   </div>
 </template>
 
