@@ -4,15 +4,19 @@ export default {
     label: String,
     value: String
   }
-
-}
+};
 </script>
 
 <template>
   <label>
     <div>{{ label }}</div>
 
-    <input type="text" data-test="input">
+    <input
+      type="text"
+      data-test="input"
+      :value="value"
+      @input="$emit('input', $event.target.value)"
+    >
   </label>
 </template>
 
