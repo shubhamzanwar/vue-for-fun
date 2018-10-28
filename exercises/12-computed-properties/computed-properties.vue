@@ -5,10 +5,20 @@ export default {
     lastName: String
   },
   computed: {
-    name() {}
+    name: {
+      get() {
+        return `${this.firstName} ${this.lastName}`;
+      },
+      set(newValue) {
+        const [firstName, lastName] = newValue.split(" ");
+        firstName !== this.firstName &&
+          this.$emit("update:firstName", firstName);
+        lastName !== this.lastName && this.$emit("update:lastName", lastName);
+      }
+    }
   },
   render() {
-    return null
+    return null;
   }
-}
+};
 </script>
