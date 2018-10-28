@@ -2,20 +2,20 @@
 export default {
   data() {
     return {
-      name: 'John',
+      name: "John",
       a: 0.1,
       b: 0.2,
-      classNames: ['content']
-    }
+      classNames: ["content"]
+    };
   }
-}
+};
 </script>
 
 <template>
-  <div class="content">
-    <h1>Hello John!</h1>
+  <div v-bind:class="classNames">
+    <h1>Hello {{name}}!</h1>
 
-    <p data-test="expr">a + b = 0.3</p>
+    <p data-test="expr">a + b = {{a + b}}</p>
   </div>
 </template>
 
