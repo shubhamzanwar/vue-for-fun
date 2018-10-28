@@ -8,9 +8,9 @@ export default {
 
 <template>
   <MyComponent>
-    <div slot="title">
+    <template slot="title">
       title from parent.
-    </div>
+    </template>
   </MyComponent>
 </template>
 
