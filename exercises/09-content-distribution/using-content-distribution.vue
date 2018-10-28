@@ -1,13 +1,17 @@
 <script>
-import MyComponent from './content-distribution.vue'
+import MyComponent from "./content-distribution.vue";
 
 export default {
   components: { MyComponent }
-}
+};
 </script>
 
 <template>
-  <MyComponent></MyComponent>
+  <MyComponent>
+    <div slot="title">
+      title from parent.
+    </div>
+  </MyComponent>
 </template>
 
 <style>
