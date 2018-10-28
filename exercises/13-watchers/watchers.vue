@@ -3,15 +3,8 @@ export default {
   props: {
     value: String
   },
-  compute: {
-    dataValue: {
-      get() {
-        return this.value;
-      }
-    }
-  }
   watch: {
-    dataValue{
+    value: {
       handler(newValue, oldValue) {
         console.log(`value changed from ${oldValue} to ${newValue}`);
       },
